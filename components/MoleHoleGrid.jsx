@@ -13,7 +13,7 @@ export default function MoleHoleGrid({ time, score, setScore }) {
   ];
 
   return (
-    <form className="grid grid-cols-3 grid-rows-2 place-items-center gap-4">
+    <form className="grid grid-cols-3 grid-rows-2 place-items-center gap-6 md:gap-4">
       {moleHoles.map((moleHole) => {
         return <MoleHole key={moleHole.id} time={time} score={score} setScore={setScore} />
       })}
@@ -23,7 +23,7 @@ export default function MoleHoleGrid({ time, score, setScore }) {
 
 function MoleHole({ time, score, setScore }) {
   return (
-    <div className="flex justify-center items-center bg-gray-700 border-8 border-red-900 rounded-full h-12 w-12 p-16 text-4xl shadow-2xl">
+    <div className="flex justify-center items-center bg-gray-700 border-8 border-red-900 rounded-full h-12 w-12 md:p-16 p-10 text-4xl shadow-2xl">
       <Mole time={time} score={score} setScore={setScore} />
     </div>
   );
@@ -56,7 +56,7 @@ function Mole({ time, score, setScore }) {
   return (
     <button
 
-      className={`${hidden ? 'hidden' : null} relative h-12 w-12 p-10 select-none animate-fade-in-and-wiggle`}
+      className={`${hidden ? 'hidden' : null} relative h-12 w-12 p-8 md:p-10 select-none animate-fade-in-and-wiggle`}
       type="button"
       onClick={onMoleClick}
     >
