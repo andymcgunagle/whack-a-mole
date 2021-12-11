@@ -55,6 +55,7 @@ function Mole({ time, score, setScore }) {
 
   return (
     <button
+
       className={`${hidden ? 'hidden' : null} relative h-12 w-12 p-10 select-none animate-fade-in-and-wiggle`}
       type="button"
       onClick={onMoleClick}

@@ -2,7 +2,6 @@ const imagesList = [
   '/eastern-mole.png',
   '/javascript-logo.png',
   '/react-logo.png',
-  '/nextjs-logo.png',
   '/tailwind-css-logo.png',
 ];
 

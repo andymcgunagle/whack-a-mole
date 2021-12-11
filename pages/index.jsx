@@ -18,7 +18,7 @@ export default function Home() {
   }, [time]);
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen gap-12">
+    <div className="flex flex-col justify-center items-center min-h-screen gap-12 p-4">
       <Head>
         <title>Whack-A-Mole</title>
         <meta name="description" content="Whack-A-Mole with Next.js and Tailwind CSS" />
@@ -28,9 +28,14 @@ export default function Home() {
         <h1 className="text-4xl font-bold">Whack-A-Mole</h1>
       </header>
 
-      <main className="flex flex-col items-center gap-6">
+      <main className="flex flex-col items-center gap-8">
         <div className="grid grid-cols-2 gap-10">
-          <p className="text-2xl font-bold">Time: {time}</p>
+          <p className="text-2xl font-bold">
+            Time:
+            <span className={`${time < 5 && time !== 0 ? 'text-red-500' : null}`}>
+              {time}
+            </span>
+          </p>
           <p className="text-2xl font-bold">Score: {score}</p>
         </div>
 
