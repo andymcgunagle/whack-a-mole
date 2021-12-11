@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import Button from '../components/Button.jsx';
+import Button from '../components/reusableComponents/Button.jsx';
 import MoleHoleGrid from '../components/MoleHoleGrid.jsx';
 
 export default function Home() {
