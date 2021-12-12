@@ -7,7 +7,7 @@ export default function Home() {
   const [time, setTime] = useState(0);
   const [score, setScore] = useState(0);
 
-  const startTimer = () => {
+  const startGame = () => {
     setScore(0);
     setTime(30);
   };
@@ -41,7 +41,7 @@ export default function Home() {
 
         <MoleHoleGrid time={time} score={score} setScore={setScore} />
 
-        <Button onClick={startTimer}>
+        <Button onClick={startGame}>
           Start
         </Button>
       </main>
