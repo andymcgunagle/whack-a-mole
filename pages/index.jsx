@@ -5,11 +5,12 @@ import MoleHoleGrid from '../components/MoleHoleGrid.jsx';
 
 export default function Home() {
   const [time, setTime] = useState(0);
+  const [timeSelect, setTimeSelect] = useState(30);
   const [score, setScore] = useState(0);
 
   const startGame = () => {
     setScore(0);
-    setTime(30);
+    setTime(timeSelect);
   };
 
   useEffect(() => {
@@ -41,13 +42,33 @@ export default function Home() {
 
         <MoleHoleGrid time={time} score={score} setScore={setScore} />
 
-        <Button onClick={startGame}>
-          Start
-        </Button>
+        <div className="flex flex-col justify-evenly items-center gap-3 w-full">
+          <div className="flex items-center gap-1 text-base">
+            <label htmlFor="time-select">
+              Play for
+            </label>
+            <select
+              name="time-select"
+              value={timeSelect}
+              onChange={(e) => setTimeSelect(e.target.value)}
+              className="py-1 bg-transparent"
+            >
+              <option value={30}>30 seconds</option>
+              <option value={45}>45 seconds</option>
+              <option value={60}>60 seconds</option>
+              <option value={90}>90 seconds</option>
+              <option value={120}>120 seconds</option>
+            </select>
+          </div>
+
+          <Button onClick={startGame}>
+            Start
+          </Button>
+        </div>
       </main>
 
       <footer>
-        <p className="font-thin">Made by Andy McGunagle with Next.js and Tailwind CSS</p>
+        <p className="text-sm font-thin">Made by Andy McGunagle with Next.js and Tailwind CSS</p>
       </footer>
     </div>
   );
