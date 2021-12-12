@@ -42,8 +42,8 @@ export default function Home() {
 
         <MoleHoleGrid time={time} score={score} setScore={setScore} />
 
-        <div className="flex flex-col justify-evenly items-center gap-3 w-full">
-          <div className="flex items-center gap-1 text-base">
+        <div className="flex flex-col justify-evenly items-center md:gap-3 gap-5 w-full">
+          <div className="flex items-center md:gap-1 gap-2 text-base">
             <label htmlFor="time-select">
               Play for
             </label>
